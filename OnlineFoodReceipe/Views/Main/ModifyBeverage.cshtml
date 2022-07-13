@@ -1,0 +1,53 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<html>
+    <head>
+        <title>Modify Beverage Page</title>
+    <link href="/css/StateWiseMenu.css" rel="stylesheet" />
+    </head>
+    <body>
+
+        <div class="container-fluid" style="margin-top:20px;">
+            <div class="row">
+                <div class="col-md-2" >
+                    <span id="actlink" style="background: #3498DB;border-radius: 4px 5px;padding: 10px;" >@Html.ActionLink("Back", "BeverageMenu",new{@id="Beverage"})</span>
+                </div>
+            </div>
+        </div>
+
+        @{Html.BeginForm();}
+        <div class="container-fluid" style="margin-top:20px;">
+            <div class="row">
+
+            @foreach(OnlineFoodReceipe.Models.Menu m in ViewBag.List)
+            {
+                <div class="col-md-4" style="margin-top:20px">
+                    <div class="card" style="width: 18rem;border-radius:4px 4px">
+                          <img src="~/NewlyAddedImg/@m.Photo" class="card-img-top" alt="...">
+                          <div class="card-body">
+                                <h6 class="card-title" style="font-weight:500;color:blue">@m.RName</h6>
+                          </div>
+                          <div class="card-body" >
+                            <table class="table table-borderless">
+                                <tr>
+                                    <td>
+                                        <span id="actlink" style="background: #3498DB;border-radius: 4px 5px;padding: 10px;" >@Html.ActionLink("Edit", "InfoEdit", new { @id = m.RId })</span>
+                                    </td>
+                                    <td>
+                                        <span id="actlink" style="background: #F73710;border-radius: 4px 5px;padding: 10px;" >@Html.ActionLink("Delete", "DeleteBeverage", new { @id = m.RId })</span>
+                                    </td>
+                                </tr>
+                            </table>
+                          </div>
+                    </div>
+                </div>
+            }
+            </div>
+        </div>
+        @{Html.EndForm();}
+
+    </body>
+</html>

@@ -1,0 +1,16 @@
+﻿img {
+    height: 200px;
+    width: 200px;
+    padding: 20px;
+}
+
+#right {
+    padding: 20px;
+}
+#lbl, #remove {
+    font-weight: 600;
+    color: #1F618D;
+}
+#ro {
+    padding: 11px;
+}

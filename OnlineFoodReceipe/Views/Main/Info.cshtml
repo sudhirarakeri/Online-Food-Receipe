@@ -1,0 +1,47 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<html>
+    <head>
+        <title>Receipe Information Page</title>
+        <link rel="stylesheet" href="~/css/Info.css" />
+    </head>
+    <body>
+    @{Html.BeginForm();}
+        <div class="container-fluid" id="infol">
+            <div class="row" style="margin:20px;" >
+                <label style="color: #283747"><h2>Recipe Name :- @ViewBag.Rname (@ViewBag.Vnb - @ViewBag.State)</h2></label>
+                <div class="col-md-5">
+                    <div class="row" style="margin:1px;margin-top:8px;">
+                        <label id="exampleFormControlFile"><h5>Image :- </h5></label>
+                        <img id="imge" src="~/NewlyAddedImg/@ViewBag.Photo" height="255" width="200" />
+                    </div>
+                    <p id="line"></p>
+                    <div class="row" style="margin:1px;margin-top:5px;">
+                        <label style="color: #CB4335" id="you"><h5>Youtube Link :-</h5></label>
+                        <iframe id="yout" width="200" height="250" src="@ViewBag.Youtube" 
+                                title="YouTube video player" frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+                <div class="col-md-7">
+                    <div class="row" style="margin:10px;">
+                        <label style="color: #1F618D"><h5>Ingredient :-</h5></label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="10" readonly>@ViewBag.Ingredient</textarea>
+                    </div>
+                    <p id="line"></p>
+                    <div class="row" style="margin:5px;">
+                        <label style="color: #1F618D"><h5>How to Make :-</h5></label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="15" readonly>@ViewBag.Htm</textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+    @{Html.EndForm();}
+    </body>
+</html>

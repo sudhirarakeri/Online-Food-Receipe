@@ -1,0 +1,32 @@
+﻿#logbtn {
+    border: none;
+}
+#logbtn {
+    background-color: #2D53F1;
+    color: white;
+}
+#regbtn {
+    border: none;
+    font-weight:500;
+}
+
+    #regbtn:hover {
+        background-color: #2D53F1;
+        font-weight: 500;
+        color: white;
+    }
+
+#canbtn {
+    border: none;
+}
+
+    #canbtn:hover {
+        background-color: #DC1A29;
+        color: white;
+    }
+.col-md-7{
+    
+}
+#lbl {
+    
+}

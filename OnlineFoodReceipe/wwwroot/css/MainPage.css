@@ -1,0 +1,145 @@
+﻿/*Banner*/
+.w-100 {
+    width: 100%;
+    height: 300px;
+}
+
+img {
+    border-radius:4px 4px;
+}
+
+h1 {
+    color: azure;
+    font-family: cursive;
+    text-align: left;
+    margin-bottom: 90px;
+}
+/*Navbar*/
+.Menu {
+    position: sticky;
+    width: 100%;
+    z-index: 2;
+    top: 0px;
+    box-shadow: -1px 5px 5px #808B96;
+    font-family: 'Poppins', sans-serif;
+}
+
+.navbar {
+    background-color: #212F3D;
+}
+
+.nav-link {
+    color: #FDFEFE;
+    font-size: 19px;
+}
+
+    .nav-link:hover {
+        color: burlywood;
+        transform: scale(1.1);
+    }
+
+#navbarNavAltMarkup {
+    margin-left: 450px;
+}
+
+#btnnav {
+    box-shadow: none;
+    color: #FDFEFE;
+    font-size: 19px;
+    border: none;
+}
+
+    #btnnav:hover {
+        color: burlywood;
+        border: none;
+        transform: scale(1.1);
+    }
+
+#btnnav1 {
+    background-color: #FDFEFE;
+}
+
+/*Popup Model*/
+.testmodal {
+    font-family: 'Poppins', sans-serif;
+}
+
+#regbtn {
+    border: none;
+}
+
+    #regbtn:hover {
+        background-color: #2D53F1;
+        color: white;
+    }
+
+#canbtn {
+    border: none;
+}
+
+    #canbtn:hover {
+        background-color: #DC1A29;
+        color: white;
+    }
+
+
+/*Main Card*/
+.main {
+    margin-top: 40px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.card-img, .card-img-bottom, .card-img-top {
+    width: 100%;
+    height: 238px;
+}
+
+.card {
+    box-shadow: 2px 5px 5px #808B96;
+    border-radius: 5px 5px;
+}
+
+    .card:hover {
+        transform: scale(1.05);
+    }
+
+/*Footer*/
+.footer {
+    padding-top: 10px;
+}
+
+.fa-facebook-square, .fa-twitter {
+    color: #2153EC;
+    border: 1px solid white;
+    padding: 5px;
+    border-radius: 2px 9px;
+}
+
+.fa-instagram {
+    color: #E71B11;
+    border: 1px solid white;
+    padding: 5px;
+    border-radius: 2px 9px;
+}
+
+.fa-facebook-square:hover, .fa-twitter:hover {
+    color: #2153EC;
+    border: 1px solid #2153EC;
+    background-color: white;
+}
+
+.fa-instagram:hover {
+    color: #E71B11;
+    border: 1px solid #2153EC;
+    background-color: white;
+}
+
+#Foot {
+    margin-top: 1px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+#footnav {
+    color: #1E2D5B;
+}

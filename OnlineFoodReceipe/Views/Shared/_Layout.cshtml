@@ -1,0 +1,148 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - OnlineFoodReceipe</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    @*<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />*@
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    @if(TempData["M1"]!=null)
+    {
+        <section class="banner">
+            <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="10000">
+                        <img src="~/Image/VegMain.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h1>Special Veg Thali's</h1>
+                        </div>
+                    </div>
+                
+                    <div class="carousel-item" data-bs-interval="2000">
+                        <img src="~/Image/ChickenMain.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h1>Non-Veg Menu</h1>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="~/Image/BeverageMain.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h1>Best Beverage</h1>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </section>
+    }
+    @if(TempData["T1"]!=null)
+        {   <section class="Menu">
+            <nav class="navbar navbar-expand-lg bg-" style="background:#142F4A">
+                <div class="container-fluid">
+                    
+                    <button class="navbar-toggler" type="button" id="navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="loged">
+                        
+                        <div class="navbar-nav"  >
+                            <span class="navbar-brand" href="#" style="color: #F1C40F; font-size: 25px;font-weight:600  ">Online Food Recipe</span>
+                            <a class="nav-link" style="color: #FDFEFE;font-size: 19px;"  asp-controller="Main" asp-action="VNBMenu">Veg</a>
+                            <a class="nav-link" style="color: #FDFEFE;font-size: 19px;" asp-controller="Main" asp-action="VNBMenu">Non-Veg</a>
+                            <a class="nav-link" style="color: #FDFEFE;font-size: 19px;" asp-controller="Main" asp-action="VNBMenu">Beverage</a>
+                            <a class="nav-link" asp-area="" asp-controller="Main" asp-action="Profile">&nbsp;Hey, @TempData["T1"] !</a>     
+                            <a class="nav-link" asp-controller="Main" asp-action="MainPage" >&nbsp; Logout</a>
+                                     
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            </section>
+        }
+        else
+        {
+
+            <section class="Menu">
+            <nav class="navbar navbar-expand-lg bg-" style="background:#142F4A" >
+                <div class="container-fluid">
+                    
+                    <button class="navbar-toggler" type="button"  aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" >
+                        <span class="navbar-brand" href="#" style="color: #F1C40F; font-size: 25px;font-weight:600 ">Online Food Recipe</span>
+                        <div class="navbar-nav" id="navbarNavAltMarkup" style="margin-left: 520px;">
+                            <a class="nav-link" asp-controller="Main" asp-action="MainPage">Home</a>
+                            <a class="nav-link" asp-controller="Main" asp-action="LoginPage">Veg</a>
+                            <a class="nav-link" asp-controller="Main" asp-action="LoginPage">Non-Veg</a>
+                            <a class="nav-link" asp-controller="Main" asp-action="LoginPage">Beverage</a>
+                            <a class="nav-link" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">About</a>
+                           <a class="nav-link" asp-area="" asp-controller="Main" asp-action="LoginPage">Login/Sign Up</a>
+                        </div>
+
+                    </div>
+                </div>
+
+            </nav>
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+              <div class="offcanvas-header">
+                <h2 class="offcanvas-title" id="offcanvasExampleLabel" style="color:blue;font-weight:bold">About</h2>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              </div>
+              <div class="offcanvas-body">
+                <div>
+                  <p>
+                      <span style="font-weight:bold">“Online Food Recipe Website”</span> is one of the innovative idea of this era.
+                        For some peoples cooking is hobby or they like to taste different kind of food items & for
+                        others cooking is business where they can maintain hotal or restaurant. But now everyone
+                        was trying to prepare new dishes irrespective of gender & age.
+                  </p>
+                  <p>
+                      From this <span style="font-weight:bold">“Online Food Recipe Website”</span> we are giving ultimate
+                      solution for all of them. Website contains information about all food items irrespective of
+                      region & country. Anyone can interact with website, there are no age limit restrictions.
+                      We are manually displaying/publishing recipes. Users can also add their recipe’s after the
+                      admins approval. User can like on the recipe’s. Users can also give feedback about the
+                      website.
+                  </p>
+                </div>
+              </div>
+            </div>
+            </section>
+        }
+    
+
+
+    
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    @*<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>*@
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

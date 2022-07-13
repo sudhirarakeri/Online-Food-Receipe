@@ -1,0 +1,28 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<html>
+    <head>
+        <title>Feedback Page</title>
+    </head>
+    <body>
+        <div class="container-fluid" style="margin-top:20px">
+            <div class="row"  style="padding:10px;border:3px solid forestgreen;border-radius:4px 4px" >
+                <h6 style="color:green;font-weight:600">People's Feedback</h6>
+                @foreach(OnlineFoodReceipe.Models.Feedback feed in ViewBag.FeedList)
+                {
+                    <table class="table table-borderless" style="border-bottom:1px dashed black">
+                        <tr>
+                            <td>
+                                <h4 style="color:forestgreen;font-weight:600">@feed.Name</h4>
+                                <h7>@feed.Msg</h7>
+                            </td>
+                        </tr>
+                    </table>
+                }
+            </div>
+        </div>
+    </body>
+</html>

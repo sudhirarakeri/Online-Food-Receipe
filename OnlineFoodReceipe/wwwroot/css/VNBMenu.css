@@ -1,0 +1,133 @@
+﻿/*
+.button {
+    display: flex;
+    height: 50px;
+    padding: 0;
+    background: #3498DB;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    overflow: hidden;
+    font-family: "Quicksand", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+    .button:hover {
+        background: #2E86C1;
+    }
+
+    .button:active {
+        background: #006e58;
+    }
+
+.button__text,
+.button__icon {
+    display: inline-flex;
+    align-items: center;
+    padding: 0 24px;
+    color: #fff;
+    height: 100%;
+}
+
+.button__icon {
+    font-size: 1.5em;
+    background: rgba(0, 0, 0, 0.08);
+}
+
+#btnmenu {
+    margin: 10px;
+    padding: 15px;
+    color: white;
+    border: solid;
+    border-block-color: #ABB2B9;
+}
+
+    #btnmenu:hover {
+        background-color: #2C3E50;
+        color: white;
+    }
+
+#actlink {
+    background-color: #2E86C1;
+    color: azure;
+    padding: 10px;
+    margin-left: 10px;
+    border-radius: 3px 4px;
+}
+
+    #actlink:hover {
+        background-color: #2471A3;
+    }
+
+#listname {
+    font-size: 30px;
+    font-weight: 700;
+    color: #F1C40F;
+}
+
+    #listname:hover {
+        color: white;
+    }*/
+
+a {
+    color: #fafafb;
+    margin-bottom: 10px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+    a:hover {
+        color: white;
+        margin-bottom: 10px;
+        text-decoration: none;
+    }
+
+#actlink {
+    background: #3498DB;
+    color: azure;
+    border-radius: 4px 5px;
+    padding: 5px;
+}
+
+.btn {
+    background: #3498DB;
+    color: azure;
+}
+
+    .btn:hover {
+        background: #2E86C1;
+        color: white;
+    }
+
+    .btn:active {
+        background: #006e58;
+    }
+
+.card-title {
+    color: #8E44AD;
+}
+
+.card {
+    background: #FBFCFC;
+}
+
+.img-fluid {
+    /* max-width: 100%; */
+    height: 225px;
+}
+
+img {
+    height: 100px;
+    width: 100%;
+}
+
+#actlink {
+    background: #3498DB;
+    color: azure;
+    border-radius: 4px 5px;
+    padding: 5px;
+    color: #f8f9fa;
+    text-decoration: none;
+}

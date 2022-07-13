@@ -1,0 +1,80 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<html>
+    <head>
+        <title>Veg_NonVeg_Beverage Page</title>
+        <link rel="stylesheet" href="~/css/VNBMenu.css" />
+    </head>
+    <body>
+        <div class="container-fluid" style="margin-top:20px;">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card mb-3" id="c1" style="max-width: 540px;">
+                      <div class="row g-0">
+                        <div class="col-md-5">
+                          <img src="~/Image/CardU2.jpg" class="img-fluid rounded-start" alt="...">
+                        </div>
+                        <div class="col-md-7">
+                          <div class="card-body">
+                            <h3 class="card-title" id="choice">Veg</h3>
+                            <p class="card-text">For those who are pure vegetables.</p>
+                            <span  id="actlink" style="text-decoration:none;background: #3498DB;border-radius: 4px 5px;padding: 5px;color: #f8f9fa;" >@Html.ActionLink("Go Inside", "StateWiseMenu", new { @id = "Veg" })</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card mb-3" id="c1" style="max-width: 540px;">
+                      <div class="row g-0">
+                        <div class="col-md-5">
+                          <img src="~/Image/CardU1.jpg" class="img-fluid rounded-start" alt="...">
+                        </div>
+                        <div class="col-md-7">
+                          <div class="card-body">
+                            <h3 class="card-title" id="choice">Non Veg</h3>
+                            <p class="card-text">A non-vegetarian diet includes chicken, meat, eggs and fish.</p>
+                            <span  id="actlink"  >@Html.ActionLink("Go Inside", "StateWiseMenu", new { @id = "Non Veg" })</span>
+                            @*<a class="btn" asp-controller="Home" asp-action="StateWiseMenu" >Go Inside</a>*@
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
+                    <div class="card mb-3" id="c1" style="max-width: 540px;">
+                      <div class="row g-0">
+                        <div class="col-md-5">
+                          <img src="~/Image/CardU3.jpg" class="img-fluid rounded-start" alt="...">
+                        </div>
+                        <div class="col-md-7">
+                          <div class="card-body">
+                            <h3 class="card-title" id="choice">Beverage</h3>
+                            <p class="card-text">Beverage are included plain drinking water, milk, juice, smoothies and soft drinks.</p>
+                            <span  id="actlink"  >@Html.ActionLink("Go Inside", "BeverageMenu", new { @id = "Beverage" })</span>
+                            @*<a class="btn" asp-controller="Home" asp-action="StateWiseMenu" >Go Inside</a>*@
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        @if(TempData["sucess"]!=null)
+        {
+            <script type="text/javascript">
+                 alert("Hey, Welcome Cheif!");
+            </script>
+        }
+        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    </body>
+</html>

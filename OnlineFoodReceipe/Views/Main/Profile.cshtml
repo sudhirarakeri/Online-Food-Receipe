@@ -1,0 +1,170 @@
+﻿@model OnlineFoodReceipe.Models.Profile
+
+@{
+    ViewData["Title"] = "Profile Page";
+}
+
+<html>
+    <head>
+        <link href="/css/Profile.css" rel="stylesheet" />
+    </head>
+    <body>
+       <form asp-action="Profile" enctype="multipart/form-data"> 
+       <div class="row" style="margin-top:20px;padding:10px;">
+            <div class="col-md-6" id="left" style="background:#258CDC;padding:10px;margin-top: 20px;">
+                <div class="row">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="col-md-3"></div>
+                    <div class="col-md-5" style="margin-left:25px">
+                    <div class="text-center" >
+                            <img src="~/ProfileImages/@ViewBag.PhotoName" class="card-img-top" alt="...">
+                        </div>
+                    </div>
+                    <div class="col-md-3"></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4"></div>
+                    <div class="col-md-5" style="margin-left:20px">
+                        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#testmodal1">
+                            Change Photo
+                        </button>
+                    </div>
+                    <div class="col-md-3"></div>
+                        <div class="modal fade" id="testmodal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="margin-top:50px">
+                            <div class="modal-dialog modal-sm" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header" style="background:#0D81F5">
+                                            <label asp-for="ProfilePhoto" class="col-form-label"><h4>Select Photo</h4></label>
+                                            <button type="button" id="clsbtn"  class="btn btn-close btn-close-black" data-bs-dismiss="modal"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="row">
+                                                <div class="form-group row" >
+                                                    <div class="col-sm-12">
+                                                        <div class="custom-file">
+                                                            <input asp-for="ProfilePhoto" class="form-control custom-file-input">
+                                                            <label class="custom-file-label"></label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <input type="checkbox" id="remove" name="remove" /> Remove Photo
+                                            </div>
+                                            <div class="col-md-4">
+                                                <input type="submit" value="Save" class="btn btn-primary" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+                <div class="row" style="margin-top:10px;">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-6" style="margin-left:20px">
+                        <div class="form-group">
+                                <label style="color: white"><h2 style="font-weight:700">@ViewBag.Username </h2></label>
+                        </div>
+                    </div>
+                    <div class="col-md-3"></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4"></div>
+                    <div class="col-md-5" style="margin-left:10px">
+                        <div class="form-group">
+                            <label style="color: #85C1E9"><h5>Profile ID :- @ViewBag.ID </h5></label>
+                            @Html.Hidden("id",(int)@ViewBag.ID)
+                        </div>
+                    </div>
+                    <div class="col-md-3"></div>
+                </div>
+            </div>
+            <div class="col-md-6" id="right1" style="margin-top:20px;padding:20px;border:1px solid #5C5C29">
+            <div class="row" id="ro">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label asp-for="Username" id="lbl" class="control-label"></label>
+                        <textarea class="form-control" id="username" name="username" rows="1" >@ViewBag.Username</textarea>
+                        <span asp-validation-for="Username" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-6" >
+                    <div class="form-group">
+                        <label asp-for="Password" id="lbl" class="control-label"></label>
+                        <textarea class="form-control" id="password" name="password" rows="1" >@ViewBag.Password</textarea>
+                        <span asp-validation-for="Password" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row" id="ro">
+                <div class="col-md-6">
+                    <div class="form-group">
+                    <label asp-for="Email" id="lbl" class="control-label"></label>
+                   <textarea class="form-control" id="email" name="email" rows="1" >@ViewBag.Email </textarea>
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                    <label asp-for="RoleId" id="lbl" class="control-label">Role</label>
+                    <textarea class="form-control" id="RoleName" rows="1" readonly>@ViewBag.RoleName</textarea>
+                    <span asp-validation-for="RoleId" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row" id="ro">
+                <div class="col-md-6">
+                    <div class="form-group">
+                    <label asp-for="DOB" id="lbl" class="control-label"></label>
+                    <textarea class="form-control" placeholder="yyyy-mm-dd"  id="dob" name="dob" rows="1" >@ViewBag.DOB</textarea>
+                    <span asp-validation-for="DOB" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                    <label asp-for="Gender" id="lbl" class="control-label"></label>
+                    <select class="form-control" name="gender" id="gender" style="margin-right:300px;">
+                    <option>@ViewBag.Gender</option>
+                    <option>Male</option>
+                   <option>Female</option>
+                   <option>Transgender</option>
+                   </select>
+                    <span asp-validation-for="Gender" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row" id="ro">
+                <div class="col-md-6">
+                    <div class="form-group">
+                    <label asp-for="Profession" id="lbl" class="control-label"></label>
+                    <textarea class="form-control" id="profession" name="profession" rows="1" >@ViewBag.Profession</textarea>
+                    <span asp-validation-for="Profession" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                    <label asp-for="City" id="lbl" class="control-label"></label>
+                    <textarea class="form-control" id="city" name="city" rows="1" >@ViewBag.City </textarea>
+                    <span asp-validation-for="City" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row" id="ro">
+                <div class="col-md-9"></div>
+                <div class="col-md-3">
+                    <input type="submit" value="Save Changes" id="btnalert" class="btn btn-primary" />
+                </div>
+            </div>
+            </div>
+       </div>
+       </form>
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+</body>
+</html>

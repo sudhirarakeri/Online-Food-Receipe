@@ -1,0 +1,137 @@
+﻿@model OnlineFoodReceipe.Models.Img
+
+@{
+    ViewData["Title"] = "BeverageMenu";
+}
+
+<html>
+<head>
+        <link href="/css/StateWiseMenu.css" rel="stylesheet" />
+</head>
+<body>
+
+        <div class="container-fluid" style="margin-top:20px">
+            <div class="row">
+                <div class="col-md-4">
+                    <a id="backme" asp-action="VNBMenu" asp-controller="Main" style="color:blue">>>  Veg_NonVeg_Beverage_Menu</a>
+                </div>
+                <div class="col-md-1"></div>
+                <div class="col-md-2">
+                    <h3 style="color:blue;font-weight:600">@ViewBag.Vnb</h3>
+                </div>
+                <div class="col-md-3">
+                    <button type="button" style="margin-left:50px" class="button" data-bs-toggle="modal" data-bs-target="#testmodal1">
+                        <span class="button__text">Add New</span>
+                        <span class="button__icon">
+                            <ion-icon name="add-circle-outline"></ion-icon>
+                        </span>
+                    </button>
+                </div>
+                <div class="col-md-2" >
+                    <a class="nav-link" style="background: #3BA046;border-radius: 4px 5px;padding:10px;"  asp-controller="Main" asp-action="ModifyBeverage">Modify</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container-fluid" style="margin-top:20px;">
+            <div class="row">
+
+            @foreach(OnlineFoodReceipe.Models.Menu m in ViewBag.List)
+            {
+                <div class="col-md-4" style="margin-top:20px">
+                    <div class="card" style="width: 18rem;border-radius:4px 4px">
+                          <img src="~/NewlyAddedImg/@m.Photo" class="card-img-top" alt="...">
+                          <div class="card-body">
+                              <h6 class="card-title" style="font-weight:500;color:blue">@m.RName</h6>
+                          </div>
+                          <div class="card-body" >
+                              <span id="actlink" style="background: #3498DB;border-radius: 4px 5px;padding: 5px;border-top:1px solid #EAECEE" >@Html.ActionLink("Click Here", "Info", new { @id = m.RId })</span>
+                          </div>
+                    </div>
+                </div>
+            }
+            </div>
+        </div>
+
+
+        <div class="modal fade" id="testmodal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="margin-top:10px">
+            <div class="modal-dialog modal-xl" role="document">
+                <div class="modal-content">
+                    <form asp-action="BeverageMenu" enctype="multipart/form-data">
+                    <div class="row" style="background-color: #212F3D;padding:10px;padding-top:15px;color: #FDFEFE;border-radius:5px 5px">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <div class="col-md-2">
+                            <label asp-for="RName" class="control-label"><h3>Recipe_Name</h3></label>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group" style="margin-left:10px;">
+                                <input asp-for="RName" class="form-control" required/>
+                                <span asp-validation-for="RName" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <select class="form-control" name="choice1" id="choice1" style="margin-right:300px;" required>
+                                <option>Beverage</option>
+                            </select> 
+                        </div>
+                        <div class="col-md-2">
+                            <select class="form-control" name="choice2" id="choice2" style="margin-right:300px;" required>
+                               <option>Others</option>
+                            </select> 
+                        </div>
+                        <div class="col-md-2">
+                            <input type="submit" value="Save" style="margin-left:30px;" class="btn btn-primary" />
+                            <button type="button" id="clsbtn" style="margin-left:10px;" class="btn btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                        </div>
+                    </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-4" style="border-right: 2px solid #B2BABB;">
+                            <label asp-for="Photo" class="col-sm-2 col-form-label"><h4>Add_Image</h4></label>
+                            <div class="form-group row" >
+                                 <div class="col-sm-10">
+                                     <div class="custom-file">
+                                          <input asp-for="Photo" class="form-control custom-file-input" required>
+                                          <label class="custom-file-label"></label>
+                                     </div>
+                                 </div>
+                            </div>
+                            <p id="line" style="border-top: 2px solid #B2BABB;"></p>
+                            <div class="form-group">
+                                <label asp-for="Ingredient" class="control-label"><h4>Ingredient</h4></label>
+                                <p class="card-text">
+                                    <textarea class="form-control" name="ingredient" id="ingredient" rows="10" required></textarea>
+                                </p>
+                                <span asp-validation-for="Ingredient" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="form-group" style="margin-top:15px;">
+                                <label asp-for="Youtube" class="control-label"><h4>Youtube_Link</h4></label>
+                                <input  asp-for="Youtube" class="form-control" />
+                                <span asp-validation-for="Youtube" class="text-danger"></span>
+                            </div>
+                            <p id="line" style="border-top: 2px solid #B2BABB;margin-top:22px;"></p>
+                            <div class="form-group">
+                                <label asp-for="HTM" class="control-label"><h4>How_To_Make</h4></label>
+                                <p class="card-text">
+                                    <textarea class="form-control" name="htm" id="htm" rows="10" required></textarea>
+                                </p>
+                                <span asp-validation-for="HTM" class="text-danger"></span>
+                            </div>
+                        </div>
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+
+</body>
+</html>

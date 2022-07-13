@@ -1,0 +1,217 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+    /* --bs-gutter-x: 1.5rem; */
+    /* --bs-gutter-y: 0; */
+    width: 98%;
+    /* padding-right: calc(var(--bs-gutter-x) * .5); */
+    /* padding-left: calc(var(--bs-gutter-x) * .5); */
+    /* margin-right: auto; */
+    /* margin-left: auto; */
+}
+
+
+
+a.navbar-brand {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+/* Provide sufficient contrast against white background */
+a {
+  color: #0366d6;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.border-top {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  min-height: 100%;
+}
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 0px;
+}
+.footer {
+  bottom: 0px;
+  width: 100%;
+  white-space: nowrap; /* Vertically center the text there */
+}
+
+
+/*Banner*/
+.w-100 {
+    width: 100%;
+    height: 300px;
+}
+
+img {
+    opacity: 0.9;
+    transition: all 1.4s ease 0s;
+    transform: none;
+}
+
+h1 {
+    color: azure;
+    font-family: cursive;
+    text-align: left;
+    margin-bottom: 90px;
+}
+
+/*Navbar*/
+.Menu {
+    position: sticky;
+    width: 100%;
+    z-index: 2;
+    top: 0px;
+    box-shadow: -1px 5px 5px #808B96;
+    font-family: 'Poppins', sans-serif;
+}
+
+.navbar {
+    background-color: #1B3279;
+}
+
+.nav-link {
+    color: white;
+    font-size: 19px;
+}
+
+    .nav-link:hover {
+        color: burlywood;
+        transform: scale(1.1);
+        border-bottom:1px solid white;
+    }
+
+#loged{
+
+}
+
+#btnnav {
+    box-shadow: none;
+    color: #FDFEFE;
+    font-size: 19px;
+    border: none;
+}
+
+    #btnnav:hover {
+        color: burlywood;
+        border: none;
+        transform: scale(1.1);
+    }
+
+#btnnav1 {
+    background-color: #FDFEFE;
+}
+
+/*Popup Model*/
+.testmodal {
+    font-family: 'Poppins', sans-serif;
+}
+
+p {
+    font-family: 'Poppins', sans-serif;
+}
+
+/*Main Card*/
+.main {
+    margin-top: 40px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.card-img, .card-img-bottom, .card-img-top {
+    width: 100%;
+    height: 238px;
+}
+
+.card {
+    box-shadow: 2px 5px 5px #808B96;
+    border-radius: 5px 5px;
+}
+
+    .card:hover {
+        transform: scale(1.05);
+    }
+
+/*Footer*/
+.footer {
+    padding-top: 10px;
+}
+
+.fa-facebook-square, .fa-twitter {
+    color: #2153EC;
+    border: 1px solid white;
+    padding: 5px;
+    border-radius: 2px 9px;
+}
+
+.fa-instagram {
+    color: #E71B11;
+    border: 1px solid white;
+    padding: 5px;
+    border-radius: 2px 9px;
+}
+
+.fa-facebook-square:hover, .fa-twitter:hover {
+    color: #2153EC;
+    border: 1px solid #2153EC;
+    background-color: white;
+}
+
+.fa-instagram:hover {
+    color: #E71B11;
+    border: 1px solid #2153EC;
+    background-color: white;
+}
+
+#Foot {
+    margin-top: 1px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+#footnav {
+    color: #1E2D5B;
+}
+

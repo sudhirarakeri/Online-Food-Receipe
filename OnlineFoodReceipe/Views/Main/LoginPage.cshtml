@@ -1,0 +1,279 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<html>
+    <head>
+        <title>Login Page</title>
+        <link rel="stylesheet" href="~/css/LoginPage.css" />
+    </head>
+    <body>
+
+        @{Html.BeginForm();}
+        <div class="container-fluid" style="margin-top:100px;margin-bottom:90px;">
+            <div class="row" id="log" >
+                 <div class="col-md-2"></div>               
+                 <div class="col-md-7">
+                     <div class="row" style="border:2px solid #99A3A4;padding:20px;border-radius:4px 4px;">
+                                <div class="col-md-2"></div>
+                                <div class="col-md-8" >
+                                    <div class="d-grid gap-2">
+                                        <a class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#testmodal1">Create Account</a>
+                                        <h5 style="text-align: center; color: #7F8C8D; margin-bottom: 20px; ">
+                                            ---------------------OR---------------------
+                                        </h5>
+                                    </div>
+                                </div>
+                                <div class="col-md-2"></div>
+                         <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <i class="fa fa-user fa-2x" aria-hidden="true" style="margin-top:6px;"></i>&nbsp;&nbsp; 
+                                            <span style="font-size:25px">Email</span>
+                                         </div>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="form-group">
+                                            <input type="email" id="email" name="email" class="form-control" placeholder="example@gmail.com" required/>
+                                        </div>
+                                    </div>
+                         </div>
+                         <div class="row">
+                             <div class="col-md-4">
+                                 <div class="form-group">
+                                     <i class="fa fa-unlock-alt fa-2x" aria-hidden="true" style="margin-top: 20px;"></i>&nbsp;&nbsp;
+                                     <span style="font-size:25px">Password</span>
+                                 </div>
+                             </div>
+                             <div class="col-md-8">
+                                  <div class="form-group">
+                                       <input type="password" id="password" name="password" class="form-control" style="margin-top:20px;" required />
+                                  </div>
+                             </div>
+                         </div>
+                         <div class="row" style="margin-top:20px;">
+                             <div class="col-md-4"></div>
+                             <div class="col-md-8">
+                                 <a style="color:blue;font-weight:400" data-bs-toggle="modal" data-bs-target="#testmodal2">Forget Password</a>
+                             </div>
+                         </div>
+                         <div class="row">
+                             <div class="col-md-4"></div>
+                             <div class="col-md-8">
+                                 <div class="modal-footer" style="margin-top:10px;" >
+                                    <input type="submit" id="regbtn" value="Login" class="btn"/>
+                                </div>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+        </div>
+        @{Html.EndForm();}
+
+        @{Html.BeginForm();}
+        <div class="modal fade" id="testmodal1" aria-labelledby="testModalLabel" style="margin-top:50px">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                            <div class="row">
+                                <div class="col-md-5" style="background-color:#258CDC">
+                                    <div class="row">&nbsp;</div>
+                                    <div class="row">
+                                        <span style="font-size:60px;color:white">Online</span>
+                                    </div>
+                                    <div class="row">
+                                        <span style="font-size:60px;color:white">Food</span>
+                                    </div>
+                                    <div class="row">
+                                        <span style="font-size:60px;color:white">Recipe</span>
+                                    </div>
+                                    <div class="row"><br /><br /></div>
+                                    <div class="row" style="background:white;">
+                                        <div class="col-md-3"></div>
+                                        <div class="col-md-6">
+                                            <img src="~/Image/google.png" height="50" width="50" />
+                                            <img src="~/Image/facebook.jpg" height="43" width="43" />
+                                        </div>
+                                        <div class="col-md-1"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-7">
+                                    <div class="row">&nbsp;</div>
+                                    <div class="row">
+                                        <div class="col-md-3"></div>
+                                        <div class="col-md-6" style="border-bottom: 2px solid #273746;">
+                                            <h4 style="color: #154360;">Registration Form</h4>
+                                        </div>
+                                        <div class="col-md-1"></div>
+                                        <div class="col-md-2">
+                                            <button type="button" class="btn btn-close" id="btnnav1" data-bs-dismiss="modal"></button>
+                                        </div>
+                                    </div>
+                                    <div class="row"  style="padding:10x">
+                                        <table class="table table-borderless">
+                                            <tr>
+                                                <td>&nbsp;</td>
+                                                <td>
+                                                    <span style="color: #21618C;font-weight:600;">Name</span>
+                                                    <input type="text" id="fname" name="fname" class="form-control" placeholder="Jhon" required />
+                                                </td>
+                                                <td>
+                                                    <span style="color: #21618C;font-weight:600;">Surname</span>
+                                                    <input type="text" id="lname" name="lname" class="form-control" placeholder="Deo" required />
+                                                </td>
+                                                <td>&nbsp;</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div class="row"  style="padding:10x">
+                                        <table class="table table-borderless">
+                                            <tr>
+                                                <td style="padding-left: 30px;">
+                                                    <span style="color: #21618C;font-weight:600;">Email</span>
+                                                    <input type="email" id="email" name="email" class="form-control" placeholder="example@gmail.com" required/>
+                                                </td>
+                                                <td>&nbsp;</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div class="row"  style="padding:10x">
+                                        <table class="table table-borderless">
+                                            <tr>
+
+                                                <td style="padding-left: 30px;">
+                                                    <span style="color: #21618C;font-weight:600;">Password</span>
+                                                    <input type="password" id="password" name="password" class="form-control" required />
+                                                </td>
+                                                <td>&nbsp;</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div class="row" style="">
+                                        <table class="table table-borderless">
+                                            <tr>
+                                                <td>&nbsp;</td>
+                                                <td style="border-bottom: 2px solid #273746;">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
+                                                        <label class="form-check-label" for="invalidCheck2" style="color: #21618C;font-weight:600;">
+                                                            Agree to terms and conditions
+                                                        </label>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div class="row" style="margin-top:3px">
+                                        <div class="col-md-4"></div>
+                                        <div class="col-md-4">
+                                            <button class="btn" id="regbtn" data-dismiss="modal">Register</button>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <button class="btn" id="canbtn" data-bs-dismiss="modal">Cancel</button>
+                                        </div>
+                                    </div>
+                                    <div class="row">&nbsp;</div>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+         </div>
+        @{Html.EndForm();}
+
+        @{Html.BeginForm();}
+        <div class="modal fade" id="testmodal2" aria-labelledby="testModalLabel" style="margin-top:50px">
+              <div class="modal-dialog modal-md">
+                 <div class="modal-content">
+                        <div class="row" style="margin-top:10px">
+                            <div class="col-md-3"></div>
+                            <div class="col-md-6">
+                                 <h4 style="color: #154360;">Forget Password</h4>
+                            </div>
+                            <div class="col-md-1"></div>
+                            <div class="col-md-2">
+                                 <button type="button" class="btn btn-close" id="btnnav1" data-bs-dismiss="modal"></button>
+                             </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-1"></div>
+                            <div class="col-md-10" style="border-top:1px solid black"></div>
+                            <div class="col-md-1"></div>
+                        </div>
+                        <div class="row">&nbsp;</div>
+                        <div class="row">
+                            <div class="col-md-1"></div>
+                            <div class="col-md-4">
+                                <span style="color: black;font-weight:600;">Email</span>
+                            </div>
+                            <div class="col-md-6">
+                                <input type="email" id="email" name="email" class="form-control" placeholder="example@gmail.com" required/>
+                            </div>
+                            <div class="col-md-1"></div>
+                        </div>
+                        <div class="row">&nbsp;</div>
+                        <div class="row">
+                            <div class="col-md-1"></div>
+                            <div class="col-md-4">
+                                <span style="color: black;font-weight:600;">Date Of Birth</span>
+                            </div>
+                            <div class="col-md-6">
+                                <input type="date" id="date" name="date" class="form-control" required />
+                            </div>
+                            <div class="col-md-1"></div>
+                        </div>
+                        <div class="row">&nbsp;</div>
+                        <div class="row">
+                            <div class="col-md-1"></div>
+                            <div class="col-md-4">
+                                <span style="color: black;font-weight:600;">New Password</span>
+                            </div>
+                            <div class="col-md-6">
+                                <input type="password" id="password" name="password" class="form-control" required />
+                            </div>
+                            <div class="col-md-1"></div>
+                        </div>
+                        <div class="row">&nbsp;</div>
+                        <div class="row">
+                            <div class="col-md-1"></div>
+                            <div class="col-md-10" style="border-top:1px solid black"></div>
+                            <div class="col-md-1"></div>
+                        </div>
+                        <div class="row" style="margin-top:10px">
+                            <div class="col-md-6"></div>
+                            <div class="col-md-3">
+                                 <button class="btn" id="regbtn" data-dismiss="modal">Submit</button>
+                            </div>
+                            <div class="col-md-3">
+                                 <button class="btn" id="canbtn" data-bs-dismiss="modal">Cancel</button>
+                            </div>
+                        </div>
+                        <div class="row">&nbsp;</div>
+                 </div>
+             </div>
+        </div>
+        @{Html.EndForm();}
+
+        @if(ViewBag.Message!=null)
+        {
+            <script type="text/javascript">
+                alert("Invalid Username or Password");
+            </script>
+        }
+        @if(ViewBag.Msg1!=null)
+        {
+            <script type="text/javascript">
+                alert("Password Changed Sucessfully");
+            </script>
+        }
+        @if(ViewBag.Msg2!=null)
+        {
+            <script type="text/javascript">
+                alert("Given input is not valid");
+            </script>
+        }
+        <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+</body>
+</html>

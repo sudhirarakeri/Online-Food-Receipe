@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32616.157
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineFoodReceipe", "OnlineFoodReceipe\OnlineFoodReceipe.csproj", "{6BB84541-086F-419D-9ED1-CBBE1EF70709}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6BB84541-086F-419D-9ED1-CBBE1EF70709}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6BB84541-086F-419D-9ED1-CBBE1EF70709}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6BB84541-086F-419D-9ED1-CBBE1EF70709}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6BB84541-086F-419D-9ED1-CBBE1EF70709}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6FC9FE7D-5AF4-4273-86EC-C9CF1A374503}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,99 @@
+﻿@model OnlineFoodReceipe.Models.Img
+
+@{
+    ViewData["Title"] = "Receipe Information Edit Page";
+}
+<html>
+    <head>
+        <link href="/css/StateWiseMenu.css" rel="stylesheet" />
+    </head>
+    <body>
+
+        <form asp-action="InfoEdit" enctype="multipart/form-data">
+        <div class="row" style="margin-top:20px;">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="col-md-2">
+                <label asp-for="RName" class="control-label"><h3>Recipe_Name</h3></label>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group" style="margin-left:10px;">
+                    <textarea class="form-control" name="rname" id="rname" rows="1">@ViewBag.Rname</textarea>
+                    @Html.Hidden("rid", (int)ViewBag.Rid)
+                    @Html.Hidden("id", (int)ViewBag.Id)
+                </div>
+            </div>
+            <div class="col-md-2">
+                <select class="form-control" name="choice1" id="choice1" style="margin-right:300px;">
+                    <option>@ViewBag.Vnb</option>
+                    <option>Veg</option>
+                   <option>Non Veg</option>
+                </select> 
+            </div>
+            <div class="col-md-2">
+                <select class="form-control" name="choice2" id="choice2" style="margin-right:300px;">
+                   <option>@ViewBag.State</option>
+                   <option>Maharashtra</option>
+                   <option>Punjab</option>
+                   <option>Uttar Pradesh</option>
+                   <option>Gujrat</option>
+                   <option>Jammu Kashmir</option>
+                   <option>Rajsthan</option>
+                   <option>Karnataka</option>
+                   <option>West Bangal</option>
+                   <option>UttaraKhand</option>
+                   <option>Delhi</option>
+                   <option>Odisha</option>
+                   <option>Others</option>
+                </select> 
+            </div>
+            <div class="col-md-1">
+                <input type="submit" value="Update" style="margin-left:10px;" class="btn btn-primary" />       
+            </div>
+            <div class="col-md-1"></div>
+        </div>
+        <div class="modal-body" style="margin-top:20px">
+            <div class="row">
+                <div class="col-md-4" style="border-right: 2px solid #B2BABB;">
+                    <label asp-for="Photo" class="col-sm-2 col-form-label"><h4>Add_Image</h4></label>
+                    <div class="form-group row" >
+                            <div class="col-sm-10">
+                                <div class="custom-file">
+                                    <input asp-for="Photo" placeholder="@ViewBag.Photo" value="@ViewBag.Photo" class="form-control custom-file-input">
+                                    <label class="custom-file-label"></label>
+                                </div>
+                            </div>
+                        </div>
+                    <p id="line" style="border-top: 2px solid #B2BABB;"></p>
+                    <div class="form-group">
+                        <label asp-for="Ingredient" class="control-label"><h4>Ingredient</h4></label>
+                        <p class="card-text">
+                            <textarea class="form-control" name="ingredient" id="ingredient" rows="10">@ViewBag.Ingredient</textarea>
+                        </p>
+                        <span asp-validation-for="Ingredient" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="form-group" style="margin-top:5px;">
+                        <label asp-for="Youtube" class="control-label"><h4>Youtube_Link</h4></label>
+                        <textarea class="form-control" name="youtube" id="youtube" rows="1">@ViewBag.Youtube</textarea>
+                        <span asp-validation-for="Youtube" class="text-danger"></span>
+                    </div>
+                    <p id="line" style="border-top: 2px solid #B2BABB;margin-top:30px;"></p>
+                    <div class="form-group">
+                        <label asp-for="HTM" class="control-label"><h4>How_To_Make</h4></label>
+                        <p class="card-text">
+                            <textarea class="form-control" name="htm" id="htm" rows="10">@ViewBag.Htm</textarea>
+                        </p>
+                        <span asp-validation-for="HTM" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </form>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+</body>
+</html>

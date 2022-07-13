@@ -1,0 +1,197 @@
+﻿
+
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="~/css/MainPage.css" rel="stylesheet" />
+</head>
+<body>
+    
+    <section class="banner">
+        <div class="container-fluid" style="margin-top:10px;">
+            <div class="row" style="border-bottom:1px solid #212F3D">
+                <div class="col-md-6">
+                    <table class="table table-borderless">
+                        <tr>
+                            <td>
+                                <h2 style="text-align:center;color:#2593DC;font-weight:700">@ViewBag.Rid</h2>
+                            </td>
+                        </tr>
+                        <tr>
+                            
+                            <td>
+                                <h3 style="text-align:center">Total Recipe</h3>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="col-md-6" >
+                    <table class="table table-borderless" style="border-left:1px solid #212F3D">
+                        <tr>
+                            <td>
+                                <h2 style="text-align:center;color:#2593DC;font-weight:700;font-family:cursive">@ViewBag.Id</h2>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h3 style="text-align:center">Total Account Enagaged</h3>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="main">
+        <div class="container">
+            <div class="row">
+                  <table class="table table-borderless">
+                    <tr>
+                        <td>
+                            <h2 style="color:darkblue;font-weight:700">Veg</h2>
+                            <p>
+                                <h4>Here you will find many popular & authentic veg recipes from Indian cuisine like 
+                                    biryani, pulao, palak paneer, aloo gobi, samosa, malai kofta and naan, to name a few.</h4>
+                            </p>
+                        </td>
+                        <td>
+                            <img src="~/Image/Card1.jpg" style=" border-radius:4px 4px;" height="300" width="500" />
+                        </td>
+                    </tr>
+                  </table>
+            </div>
+            <div class="row" style="margin-top:10px;border-top:1px dotted skyblue">
+                  <table class="table table-borderless">
+                    <tr>
+                        <td>
+                            <img src="~/Image/Card2.jpg" style=" border-radius:4px 4px;" height="300" width="550" />
+                        </td>
+                        <td>&nbsp;<br /></td>
+                        <td>&nbsp;<br /></td>
+                        <td>&nbsp;<br /></td>
+                        <td >
+                            <h2 style="color:darkblue;font-weight:700">Non-Veg</h2>
+                            <p>
+                                <h4>Indian non veg recipes includes chicken starters, fish starters, 
+                                    chicken and mutton biryani recipes, chicken 65, chili chicken, biryani and many more...</h4>
+                            </p>
+                        </td>
+                    </tr>
+                  </table>
+            </div>
+            <div class="row" style="margin-top:10px;border-top:1px dotted skyblue">
+                  <table class="table table-borderless">
+                    <tr>
+                        <td>
+                            <h2 style="color:darkblue;font-weight:700">Beverage</h2>
+                            <p>
+                                <h4>any potable liquid, especially one other than water, as tea, coffee, beer, or milk: 
+                                    The price of the meal includes a beverage.</h4>
+                            </p>
+                        </td>
+                        <td>
+                            <img src="~/Image/Card3.jpg" style=" border-radius:4px 4px;" height="300" width="500" />
+                        </td>
+                    </tr>
+                  </table>
+            </div>
+        </div>
+    </section>
+
+    @{Html.BeginForm();}
+    <div class="container-fluid" style="margin-top:20px;border-top:2px dashed black">
+        <div class="row" style="margin-top:20px">
+            <div class="col-md-4"></div>
+            <div class="col-md-4" style="border-bottom:1px solid royalblue">
+                <h2 style="color:royalblue;font-family:cursive;font-weight:900;margin-left:60px">Feedback Form</h2>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+        <div class="row" style="margin-top:20px">
+            <div class="col-md-6" >
+                <div class="row"></div>
+                <div class="row"  style="padding:10px;border:3px solid forestgreen;border-radius:4px 4px" >
+                  <div class="col-md-4">
+                      <h6 style="color:green;font-weight:600;">People's Feedback</h6>
+                  </div>
+                @foreach(OnlineFoodReceipe.Models.Feedback feed in ViewBag.FeedList)
+                {
+                    <table class="table table-borderless" style="border-bottom:1px dashed black">
+                        <tr>
+                            <td>
+                                <h4 style="color:forestgreen;font-weight:600">@feed.Name</h4>
+                                <h7>@feed.Msg</h7>
+                            </td>
+                        </tr>
+                    </table>
+                }
+                 <div class="col-md-4">
+                      <a class="nav-link" style="color:forestgreen;font-weight:500" asp-action="FeedbackPage" asp-controller="Main">see all feedback</a>
+                  </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="mb-3">
+                  <label for="exampleFormControlInput1" class="form-label" style="color:#116CC6;font-weight:500">Name</label>
+                  <input type="text" class="form-control" name="name" id="name" placeholder="Jhon Deo" required>
+                </div>
+                <div class="mb-3">
+                  <label for="exampleFormControlInput1" class="form-label" style="color:#116CC6;font-weight:500">Email</label>
+                  <input type="email" class="form-control" name="email" id="email" placeholder="name@example.com" required>
+                </div>
+                <div class="mb-3">
+                  <label for="exampleFormControlTextarea1" class="form-label" style="color:#116CC6;font-weight:500">Message</label>
+                  <textarea class="form-control" name="msg" id="msg" rows="3" required></textarea>
+                </div>
+                <div>
+                    <input type="submit" style="background:blue;color:white" id="regbtn" value="Send" class="btn"/>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer class="border-top footer text-muted" style="margin-top:20px">
+         <div class="container-fluid" style="background-color:white">
+            <div class="row">
+                <div class="col-md-4">
+                    <p style="padding:10px;">
+                        &copy; 2022 Online Food Recipe
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <ul class="nav justify-content-center">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="footnav" aria-current="page" href="#">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="footnav" href="#">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="footnav" data-bs-toggle="modal" data-bs-target="#testmodal" href="#">Sign Up</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4" id="Foot">
+
+                    <i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i>
+                    &nbsp;&nbsp; <!-- For Space -->
+                    <i class="fa fa-instagram fa-2x" aria-hidden="true"></i>
+                    &nbsp;&nbsp;
+                    <i class="fa fa-twitter fa-2x" aria-hidden="true"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+    @{Html.EndForm();}
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  
+</body>
+</html>
