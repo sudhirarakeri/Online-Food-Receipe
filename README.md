@@ -25,6 +25,9 @@ Online Food Recipe Website Created by using <b>Asp.Net MVC , SQL Server, HTML, C
 <b>Receipe Information Page</b>
 ![Receipe Information Page](https://user-images.githubusercontent.com/81013807/178679314-bf9abf12-b300-4f25-ac4d-d8246b6ba672.png)
 
+<b>New Adding Receipe Page</b>
+![NewAddingReceipe Page](https://user-images.githubusercontent.com/81013807/178679715-47cd2ebf-dd89-4c9b-a58e-461266c98adc.png)
+
 <b>BeverageMenu Page</b>
 ![BeverageMenu page](https://user-images.githubusercontent.com/81013807/178678372-d1d67dc9-760b-4c2a-8bf1-e41e7e020aa2.png)
 
