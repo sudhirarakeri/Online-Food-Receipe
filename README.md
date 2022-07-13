@@ -1,5 +1,5 @@
 # Online-Food-Receipe
-Online Food Recipe Website Created by using Asp.Net MVC , SQL Server, HTML, CSS, BOOTSTRAP.
+Online Food Recipe Website Created by using <b>Asp.Net MVC , SQL Server, HTML, CSS, BOOTSTRAP</b>.
 
 <b>Home Page</b>
 ![Home Page1](https://user-images.githubusercontent.com/81013807/178677067-8b97e977-838a-4ac3-8718-8c5715ab63fd.png)
@@ -21,6 +21,9 @@ Online Food Recipe Website Created by using Asp.Net MVC , SQL Server, HTML, CSS,
 
 <b>ThirdMenu Page</b>
 ![ThirdMenu Veg Page](https://user-images.githubusercontent.com/81013807/178678479-1f692c8f-ae6a-4026-bb83-a1f8a8f5e793.png)
+
+<b>Receipe Information Page</b>
+![Receipe Information Page](https://user-images.githubusercontent.com/81013807/178679314-bf9abf12-b300-4f25-ac4d-d8246b6ba672.png)
 
 <b>BeverageMenu Page</b>
 ![BeverageMenu page](https://user-images.githubusercontent.com/81013807/178678372-d1d67dc9-760b-4c2a-8bf1-e41e7e020aa2.png)
