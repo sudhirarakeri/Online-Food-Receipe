@@ -22,10 +22,10 @@ Online Food Recipe Website Created by using <b>Asp.Net MVC , SQL Server, HTML, C
 <b>ThirdMenu Page</b>
 ![ThirdMenu Veg Page](https://user-images.githubusercontent.com/81013807/178678479-1f692c8f-ae6a-4026-bb83-a1f8a8f5e793.png)
 
-<b>Receipe Information Page</b>
+<b>Recipe Information Page</b>
 ![Receipe Information Page](https://user-images.githubusercontent.com/81013807/178679314-bf9abf12-b300-4f25-ac4d-d8246b6ba672.png)
 
-<b>New Adding Receipe Page</b>
+<b>New Adding Recipe Page</b>
 ![NewAddingReceipe Page](https://user-images.githubusercontent.com/81013807/178679715-47cd2ebf-dd89-4c9b-a58e-461266c98adc.png)
 
 <b>BeverageMenu Page</b>
